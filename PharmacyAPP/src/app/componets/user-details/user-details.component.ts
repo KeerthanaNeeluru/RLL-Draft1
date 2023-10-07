@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class UserDetailsComponent {
   users:User[]=[];
   heretoEdit?:User;
+  searchText:any;
   constructor(private userService:UserDetailsService,private auth:AuthService){}
   ngOnInit():void{
     console.log("Inside UserDisplayComponent initialization");

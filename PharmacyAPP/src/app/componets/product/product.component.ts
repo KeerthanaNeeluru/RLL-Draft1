@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class ProductComponent implements OnInit {
   public products: any = [];
   public cartItems: any[] = [];
-
+searchText:any;
 
   constructor(private product: ProductService,private auth:AuthService, private cartService: CartService,private toast:NgToastService) {
     this.products = this.product.getProducts();

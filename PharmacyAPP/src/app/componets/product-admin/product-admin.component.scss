@@ -194,7 +194,7 @@ td
 }
 
 .container {
-  border:1px solid black;
+ // border:1px solid black;
   position: fixed;
   top: 100px;
   right: 30px;
@@ -203,7 +203,7 @@ td
   overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
   background-color: #f8f9fa; /* Optional background color */
   padding: 20px; /* Optional padding */
-  box-shadow: -5px 0px 5px #005040;
+  // box-shadow: -5px 0px 5px #005040;
 }
 
 /* Add margin to the content area to avoid overlapping */

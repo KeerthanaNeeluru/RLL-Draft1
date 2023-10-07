@@ -10,6 +10,7 @@
             <li><a routerLink="/dashboard">Home</a></li>
             <li><a routerLink="/product-admin">Medicines</a></li>
             <li><a routerLink="/user-details">Users</a></li>
+            
             <li><a  (click)="logout()">SignOut</a></li>
           </ul>
         </nav>
@@ -22,7 +23,7 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon1" >Search </span>
     </div>
-    <input type="text" class="form-control" width="50%"  placeholder="Search"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" class="form-control" width="50%"  placeholder="Search" [(ngModel)]="searchText" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    
   </div>
   <div class="content">
@@ -42,7 +43,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let u of users " >
+      <tr *ngFor="let u of users|filter:searchText " >
        
         <td>{{u.userName}}</td>
         

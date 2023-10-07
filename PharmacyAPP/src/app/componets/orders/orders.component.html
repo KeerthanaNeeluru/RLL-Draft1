@@ -8,32 +8,63 @@
         <nav>
           <ul>
             <li><a routerLink="/dashboard">Home</a></li>
-            <li><a routerLink="/product">Medicines</a></li>
-            <li><a routerLink="/cart">Cart</a></li>
+            <li><a routerLink="/product-admin">Medicines</a></li>
+            <li><a routerLink="/user-details">Users</a></li>
             <li><a routerLink="/orders">Orders</a></li>
-            <li><a routerLink="/about">About Us</a></li>
+          
             <li><a  (click)="logout()">SignOut</a></li>
           </ul>
         </nav>
     </header>
   </div>
-
+<!-- 
   <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-6 mb-4" *ngFor="let o of order">
       <div class="card h-100 border-0 shadow" style="background-color: #f8f9fa;">
         <div class="card-body d-flex flex-column">
-          <!-- <img [src]="p.productUrl" alt="Product Image" class="card-img-top" /> -->
+          <img [src]="p.productUrl" alt="Product Image" class="card-img-top" />
           <div class="mt-auto">
             <h5 class="card-title ">{{o.userName}}</h5>
             <p class="card-text ">{{o.address}}</p>
             <p class="card-text "><span>Rs.{{o.total}}/-</span></p>
-            <!-- <button class="btn btn-outline-success" (click)="addToCart(p)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp; -->
-            <!-- <button class="btn btn-outline-success">Buy Now</button> -->
+            <button class="btn btn-outline-success" (click)="addToCart(p)">Add to Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-outline-success">Buy Now</button>
           </div>
         </div>
       </div>
     </div>
+  </div> -->
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1" >Search </span>
+    </div>
+    <input type="text" class="form-control" width="50%"  placeholder="Search"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!-- <button (click)="initNewOrder()" class="btn btn-outline-success">Add New Order</button> -->
   </div>
+  <div class="content">
+   
+  <div  class="container" >
+    <!-- <app-prod-edit [order]="heretoEdit" (productsChanged)="updateProductList($event)"></app-prod-edit> -->
+</div>
+  <table class="table table-hover">
+  
+    <tbody>
+      <tr *ngFor="let o of Orderarray ">
+    
+     <td class="text-center">{{o.userName}}</td>
+     <td>{{o.address}}</td>
+     <td><b>Rs.{{o.total}}/-</b></td>
+     <td>{{o.status}}</td>
+     <!-- <td><button class="btn btn-outline-primary" (click)="editProduct(p)">Edit</button></td> -->
+      </tr>
+    
+    </tbody>
+  </table>
+
+</div>
+
+
   
   <footer class="footer">
     <div class="about">

@@ -12,6 +12,7 @@ constructor(private auth: AuthService,private productService:ProductService){}
 
 products: Product[]=[];
 heretoEdit?:Product;
+searchText:any;
 ngOnInit():void{
   console.log("Inside UserDisplayComponent initialization");
     

@@ -10,6 +10,7 @@
           <li><a routerLink="/dashboard">Home</a></li>
           <li><a routerLink="/product-admin">Medicines</a></li>
           <li><a routerLink="/user-details">Users</a></li>
+          
           <li><a  (click)="logout()">SignOut</a></li>
         </ul>
       </nav>
@@ -22,7 +23,7 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon1" >Search </span>
     </div>
-    <input type="text" class="form-control" width="50%"  placeholder="Search"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" class="form-control" width="50%"  placeholder="Search" [(ngModel)]="searchText"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button (click)="initNewProduct()" class="btn btn-outline-success">Add New Product</button>
   </div>
   <div class="content">
@@ -33,7 +34,7 @@
   <table class="table table-hover">
   
     <tbody>
-      <tr *ngFor="let p of products ">
+      <tr *ngFor="let p of products |filter:searchText">
      <td><img [src]="p.productUrl" height="150" width="200"></td>
      <td class="text-center">{{p.productName}}</td>
      <td>{{p.productDescription}}</td>

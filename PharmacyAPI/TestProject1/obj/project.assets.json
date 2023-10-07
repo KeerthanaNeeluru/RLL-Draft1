@@ -992,11 +992,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Keerthana\\OneDrive\\Desktop\\Rll-Final - Copy\\RLL\\PharmacyAPI\\TestProject1\\TestProject1.csproj",
+      "projectUniqueName": "C:\\Users\\Keerthana\\OneDrive\\Desktop\\New folder (3)\\PharmacyAPI\\TestProject1\\TestProject1.csproj",
       "projectName": "TestProject1",
-      "projectPath": "C:\\Users\\Keerthana\\OneDrive\\Desktop\\Rll-Final - Copy\\RLL\\PharmacyAPI\\TestProject1\\TestProject1.csproj",
+      "projectPath": "C:\\Users\\Keerthana\\OneDrive\\Desktop\\New folder (3)\\PharmacyAPI\\TestProject1\\TestProject1.csproj",
       "packagesPath": "C:\\Users\\Keerthana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Keerthana\\OneDrive\\Desktop\\Rll-Final - Copy\\RLL\\PharmacyAPI\\TestProject1\\obj\\",
+      "outputPath": "C:\\Users\\Keerthana\\OneDrive\\Desktop\\New folder (3)\\PharmacyAPI\\TestProject1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Keerthana\\AppData\\Roaming\\NuGet\\NuGet.Config",

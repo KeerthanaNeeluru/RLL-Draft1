@@ -24,6 +24,7 @@ import { UserDetailsComponent } from './componets/user-details/user-details.comp
 import { UserEditComponent } from './componets/user-edit/user-edit.component';
 import { UserOrdersComponent } from './componets/user-orders/user-orders.component';
 import { OrdersComponent } from './componets/orders/orders.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 
@@ -48,7 +49,8 @@ import { OrdersComponent } from './componets/orders/orders.component';
     UserDetailsComponent,
     UserEditComponent,
     UserOrdersComponent,
-    OrdersComponent
+    OrdersComponent,
+    FilterPipe
   
 
 

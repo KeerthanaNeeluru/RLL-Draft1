@@ -3,6 +3,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { UserStoreService } from 'src/app/services/user-store.service';
 import { CartComponent } from '../cart/cart.component';
 import { HttpClient } from '@angular/common/http';
+import { OrderService } from 'src/app/services/order.service';
 @Component({
   selector: 'app-user-orders',
   templateUrl: './user-orders.component.html',
@@ -28,7 +29,8 @@ currentid=""
     private userStore: UserStoreService,
     private auth: AuthService,
     private cartComp:CartComponent,
-    private http:HttpClient
+    private http:HttpClient,
+    private or:OrderService
   ){
 
     this.getAllOrders();
@@ -102,12 +104,16 @@ save(){
   }
 }
 setDelete(data:any){
-  this.http.delete("https://localhost:7148/api/Orders/DeleteOrder/"+data.id).subscribe((res:any)=>
+  console.log(data);
+  
+  this.http.delete("https://localhost:7148/api/Orders/DeleteOrder/"+data.id).subscribe((result:any)=>
   {
-    console.log(data.id);
+    
     alert("order cancelled");
     this.getAllOrders();
     
+  },(error:any)=>{
+    console.error("Error",error);
   })
 }
 
