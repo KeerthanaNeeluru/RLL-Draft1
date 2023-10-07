@@ -1,0 +1,296 @@
+
+<!--<nav class="navbarr navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-bran" href="#">MediPharm</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">-->
+      <!-- Changed justify-content-end to mr-auto -->
+      <!--<li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">-->
+        <!--<a class="nav-link" routerLink="/product"> Products</a>-->
+        <!--<a routerLink="/product" routerLinkActive="active"><b>Products</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/cart">Cart</a>
+      </li>
+    </ul>
+  </div>
+</nav>-->
+
+
+<!-- <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+ 
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a style="background: red;
+          color: #fff;
+          border-radius: 4px;
+          margin: 10px;" class="nav-link px-3 cursor-pointer" (click)="logout()">Sign out</a>
+    </div>
+  </div>
+</header> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <ng-container *ngIf="role === 'Admin'">
+      <div class="home">
+        <header>
+            <div class="logo">
+                <img src="assets/onlinepharmacy.png" alt="OnlinePharmacy" class="onlinepharmacy-image">
+                <span class="medi-pharm-text">MediPharm</span>
+            </div>
+            
+            <nav>
+              <ul>
+                <li><a routerLink="/dashboard">Home</a></li>
+                <li><a routerLink="/product-admin">Medicines</a></li>
+                <li><a routerLink="/user-details">Users</a></li>
+                <li><a  (click)="logout()">SignOut</a></li>
+              </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- <img src="assets/home.png" alt="Home" class="icon">
+    <img src="assets/home.png" alt="Home" class="icon">
+    <img src="assets/login.png" alt="Login" class="icon"> -->
+      <!-- <nav class="navbarr navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-bran" href="#">MediPharm </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Hello <h3>{{fullName}}</h3></a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+           
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/product"> Products</a>
+              <a routerLink="/product" routerLinkActive="active"><b>Products</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/cart">Cart</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-nav">
+          <div class="nav-item text-nowrap">
+            <a style="background: red;
+                color: #fff;
+                border-radius: 4px;
+                margin: 10px;" class="nav-link px-3 cursor-pointer" (click)="logout()">Sign out</a>
+          </div>
+        </div>
+      </nav> -->
+
+    </ng-container>
+
+    <ng-container *ngIf="role === 'User'">
+      <div class="home">
+        <header>
+            <div class="logo">
+                <img src="assets/onlinepharmacy.png" alt="OnlinePharmacy" class="onlinepharmacy-image">
+                <span class="medi-pharm-text">MediPharm</span>
+            </div>
+            
+            <nav>
+              <ul>
+                <li><a routerLink="/dashboard">Home</a></li>
+                <li><a routerLink="/product">Medicines</a></li>
+                <li><a routerLink="/cart">Cart</a></li>
+                
+                <li><a routerLink="/about">About Us</a></li>
+                <li><a  (click)="logout()">SignOut</a></li>
+              </ul>
+            </nav>
+        </header>
+    </div>
+      <!-- <nav class="navbarr navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-bran" href="#">MediPharm -User</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+             
+              <a routerLink="/product" routerLinkActive="active"><b>Products</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/cart">Cart</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-nav">
+          <div class="nav-item text-nowrap">
+            <a style="background: red;
+                color: #fff;
+                border-radius: 4px;
+                margin: 10px;" class="nav-link px-3 cursor-pointer" (click)="logout()">Sign out</a>
+          </div>
+        </div>
+      </nav> -->
+
+    </ng-container>
+
+    <div class="inside-img">
+      <div class="hero">
+        <h1>Welcome {{fullName}}</h1>
+        <p>Your Trusted Source for Healthcare Products</p>
+        <a routerLink="/product" class="cta-button">Shop Now</a>
+      </div>
+    </div>
+
+    <div class="scroll-container">
+      <img src="../assets/img2.jpg">
+      <img src="../assets/img4.jpg">
+      <img src="../assets/img5.jpg">
+    </div>
+
+<app-feedback-view></app-feedback-view>
+    <footer class="footer">
+      <div class="about">
+        <h3>About MediPharm Pharmacy</h3>
+        <p>Learn more about our mission and values.</p>
+        <a href="/about-us">About Us</a>
+      </div>
+      <div class="quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/faq">FAQ</a></li><br>
+          <li><a href="/feedback">Feedback</a></li>
+          <li><a href="/blogs">Blogs</a></li>
+          <li><a href="/career">Career</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="mobile-app">
+        <h3>Online Medicine App</h3>
+        <p>Download our mobile app for easy access.</p>
+        <a href="/app-download">Download Now</a>
+      </div>
+      <div class="products-categories">
+          <h3>Products Categories</h3>
+          <ul>
+            <li><a href="/brands">View All Brands</a></li>
+            <li><a href="/medicines">View All Medicines</a></li>
+            <li><a href="/health-devices">Health Devices</a></li>
+            <li><a href="/nutrition">Nutrition</a></li>
+            <li><a href="/supplements">Supplements</a></li>
+          </ul>
+        </div>
+        <div class="footer-line"></div>
+        <div class="find-us">
+          <h3>Find Us On</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com"><img src="assets/facebook.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com"><img src="assets/youtube.png" alt="Youtube"></a>
+            <a href="https://www.linkedin.com"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+          </div>
+        </div>
+      </footer>
+
+      <!-- <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h4>Company</h4>
+              <ul>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Blog</li>
+                <li>Partner with PharmEasy</li>
+                <li>Sell at PharmEasy</li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h4>Our Services</h4>
+              <ul>
+                <li>Order Medicine</li>
+                <li>Healthcare Products</li>
+                
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h4>Featured Categories</h4>
+              <ul>
+                <li>Top Products</li>
+                <li>Elderly Care</li>
+               
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h4>Mega Clearance Sale</h4>
+              <ul>
+                <li>Trending Products</li>
+                <li>Mattresses</li>
+               
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <h4>Health Condition</h4>
+              <ul>
+                <li>Diabetic Care</li>
+               
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h4>Need Help</h4>
+              <ul>
+                <li>Browse All Medicines</li>
+                <li>Browse All Molecules</li>
+                
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h4>FAQs</h4>
+              <ul>
+                <li>Browse All Cities</li>
+                <li>Browse All Areas</li>
+                <li>Browse All Stores</li>
+               
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h4>Policy Info</h4>
+              <ul>
+                <li>Editorial Policy</li>
+                <li>Privacy Policy</li>
+                <li>Vulnerability Disclosure Policy</li>
+                <li>Terms and Conditions</li>
+                <li>Customer Support Policy</li>
+                <li>Return Policy</li>
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer> -->
+
+      <footer style="background-color: #007065; color: #fff; text-align: center; padding: 10px 0; position: fixed; bottom: 0; width: 100%;">
+        &copy; 2023 MediPharm. All Rights Reserved.
+      </footer>
+
+  </div>
+</div>
+
+
+

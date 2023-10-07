@@ -1,0 +1,213 @@
+.home {
+  
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; 
+    background-color:  #007065;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   
+  }
+  
+  .onlinepharmacy-image {
+    width: 70px; 
+    margin-right: 10px; 
+  }
+  
+  .medi-pharm-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin: 0 20px;
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1); 
+  }
+  nav a{
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    
+  }
+  
+  ul li {
+    margin-right: 20px;
+    
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .footer {
+    background-color: #c7ecc7; 
+    padding: 20px 0; 
+    text-align: center;
+  }
+  
+  /* Sub-div Styles */
+  .footer div {
+    margin: 20px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  /* Header Styles */
+  .footer h3 {
+    font-size: 18px;
+    color: #005040; 
+  }
+  
+  /* Paragraph Styles */
+  .footer p {
+    font-size: 14px;
+    color: #333; 
+    margin: 10px 0;
+  }
+  
+  /* Links Styles */
+  .footer a {
+    text-decoration: none;
+    color: #007650; 
+    display: block;
+    margin-top: 5px;
+    transition: color 0.3s;
+  }
+  
+  .footer a:hover {
+    color: #005040; 
+  }
+  
+  /* Quick Links List Styles */
+  .footer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer li {
+    margin: 10px 0;
+    margin:10px;
+  }
+  
+.footer-line {
+    border: 1px solid #005040; 
+    margin: 20px 0;
+  }
+  
+.find-us {
+    text-align: right; 
+    margin-top: 20px;
+  }
+  
+  .find-us h3 {
+    font-size: 18px;
+    color: #005040; 
+  }
+  
+  .social-icons {
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    margin-right: 10px; 
+  }
+  
+  .social-icons img {
+    width: 20px; 
+  }
+  
+  .footer-line {
+    border: 0;
+    border-top: 1px solid #005040;
+    margin: 10px 0;
+  }
+  
+ .find-us {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+
+  }
+  
+  .find-us h3 {
+    color: #005040;
+    margin-right: 10px;
+
+  }
+  
+  .social-icons {
+    display: flex;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+
+  //table
+  table
+{
+    table-layout: fixed;
+    
+    text-align:left;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+td
+{
+   
+    overflow: hidden;
+}
+
+.container {
+  border:1px solid black;
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  width: 40%; /* Adjust the width as needed */
+  // height: 30%; /* Make it full height */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
+  background-color: #f8f9fa; /* Optional background color */
+  padding: 20px; /* Optional padding */
+  box-shadow: -5px 0px 5px #005040;
+}
+
+/* Add margin to the content area to avoid overlapping */
+.content {
+  margin-right: 500px; /* Adjust the margin to be greater than the width of the container */
+  padding: 30px;
+}

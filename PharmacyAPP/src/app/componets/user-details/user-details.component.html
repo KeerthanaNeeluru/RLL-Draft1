@@ -1,0 +1,107 @@
+<div class="home">
+    <header>
+        <div class="logo">
+            <img src="assets/onlinepharmacy.png" alt="OnlinePharmacy" class="onlinepharmacy-image">
+            <span class="medi-pharm-text">MediPharm</span>
+        </div>
+        
+        <nav>
+          <ul>
+            <li><a routerLink="/dashboard">Home</a></li>
+            <li><a routerLink="/product-admin">Medicines</a></li>
+            <li><a routerLink="/user-details">Users</a></li>
+            <li><a  (click)="logout()">SignOut</a></li>
+          </ul>
+        </nav>
+    </header>
+  </div>
+
+
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1" >Search </span>
+    </div>
+    <input type="text" class="form-control" width="50%"  placeholder="Search"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+  </div>
+  <div class="content">
+  <div class="container">
+  <app-user-edit [user]="heretoEdit" (userChanged)="updateUserList($event)"></app-user-edit>
+</div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+  
+        <th scope="col">UserName</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users " >
+       
+        <td>{{u.userName}}</td>
+        
+        <td>{{u.firstName}}</td>
+        <td>{{u.lastName}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.role}}</td>
+        
+        <td><button (click)="editUser(u)" class="btn btn-outline-primary">Edit</button> </td>
+        
+      </tr>
+  
+    </tbody>
+  </table>
+</div>
+  
+  
+
+
+  <footer class="footer">
+    <div class="about">
+      <h3>About MediPharm Pharmacy</h3>
+      <p>Learn more about our mission and values.</p>
+      <a href="/about-us">About Us</a>
+    </div>
+    <div class="quick-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/faq">FAQ</a></li><br>
+        <li><a href="/feedback">Feedback</a></li>
+        <li><a href="/blogs">Blogs</a></li>
+        <li><a href="/career">Career</a></li>
+        <li><a href="/contact-us">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-app">
+      <h3>Online Medicine App</h3>
+      <p>Download our mobile app for easy access.</p>
+      <a href="/app-download">Download Now</a>
+    </div>
+    <div class="products-categories">
+        <h3>Products Categories</h3>
+        <ul>
+          <li><a href="/brands">View All Brands</a></li>
+          <li><a href="/medicines">View All Medicines</a></li>
+          <li><a href="/health-devices">Health Devices</a></li>
+          <li><a href="/nutrition">Nutrition</a></li>
+          <li><a href="/supplements">Supplements</a></li>
+        </ul>
+      </div>
+      <div class="footer-line"></div>
+      <div class="find-us">
+        <h3>Find Us On</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com"><img src="assets/facebook.png" alt="Facebook"></a>
+          <a href="https://www.youtube.com"><img src="assets/youtube.png" alt="Youtube"></a>
+          <a href="https://www.linkedin.com"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+      <p> &copy; 2023 MediPharm. All Rights Reserved.</p>
+     
+    </footer>

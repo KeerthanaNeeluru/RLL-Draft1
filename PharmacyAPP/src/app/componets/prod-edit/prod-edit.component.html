@@ -1,0 +1,33 @@
+<div *ngIf="products">
+    <h2>{{products.productName}}</h2>
+    <form>
+        <div class="form-group">
+            <label >Product URL</label>
+            <input [(ngModel)]="products.productUrl" name="purl" class="form-control"  placeholder="Enter Product URL">
+          </div>
+          <div class="form-group">
+            <label >product Name</label>
+            <input [(ngModel)]="products.productName" name="pname" class="form-control"  placeholder="Enter productName">
+          </div>
+          <div class="form-group">
+            <label >Product Description</label>
+            <input [(ngModel)]="products.productDescription" name="pdes" class="form-control"  placeholder="Enter productDescription">
+          </div>
+        <div class="form-group">
+          <label >ProductPrice</label>
+          <input [(ngModel)]="products.productPrice" name="pprice"  class="form-control"  placeholder="Enter productPrice">
+        </div>
+        <div class="form-group">
+            <label >Product in stock</label>
+            <input [(ngModel)]="products.productInStock" name="pstock" class="form-control"   placeholder="Enter productInStock">
+          </div>
+        
+       
+        <button (click)="updateProduct(products)" *ngIf="products.productId" class="btn btn-primary">Save</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="deleteProduct(products)" *ngIf="products.productId" class="btn btn-danger">Delete</button>
+
+        <button (click)="createProduct(products)" *ngIf="!products.productId" class="btn btn-primary">Submit</button>
+
+      </form>
+</div>

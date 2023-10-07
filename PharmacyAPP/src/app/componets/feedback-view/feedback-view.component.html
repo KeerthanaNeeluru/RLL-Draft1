@@ -1,0 +1,28 @@
+<div class="container mt-4" >
+    
+
+    <div class="container mt-4" >
+        <h1>Feedback</h1>
+    <div class="table">
+        <div>
+         <h1 *ngIf="!isResultLoaded">Your Feedback</h1>      
+        
+        </div>
+        <div>
+            <div *ngFor="let feed of FeedbackArray">
+              <div class="review">
+              <div class="review-header">
+                <img src="./assets/profile.png" alt="Profile picture" class="review-profile">
+                <div class="review-name">{{feed.name }}</div>
+                <div class="review-verified">Verified Customer</div>
+              </div>
+                <div class="review-body">
+                  <div>{{feed.feedback }}</div>
+                </div>
+            </div>
+            <br>
+          </div>          
+        </div>
+      </div>
+    </div>
+</div>

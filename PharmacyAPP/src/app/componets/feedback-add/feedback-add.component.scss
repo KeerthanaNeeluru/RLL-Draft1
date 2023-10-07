@@ -1,0 +1,110 @@
+/* Style the container */
+.container {
+    margin-top: 20px;
+  }
+  
+  /* Style the card containing the form */
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the headings */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the form labels */
+  label {
+    font-weight: bold;
+  }
+  
+  /* Style the form inputs */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style the submit button */
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style the table container */
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  /* Style the table headers */
+  th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Style the loading message */
+  .loading-message {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Style the table rows */
+  tr {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Style the buttons in table cells */
+  .btn-success,
+  .btn-danger {
+    margin-right: 5px;
+  }
+  
+
+  /* Style the feedback form */
+  .review {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .review-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .review-name {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .review-verified {
+    color: green;
+    margin-left: 10px;
+  }
+
+  .review-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .review-body {
+    margin-top: 15px;
+  }
