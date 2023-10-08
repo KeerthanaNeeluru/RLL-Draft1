@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
+import { NavigationExtras, Router } from '@angular/router';
 @Component({
   selector: 'app-product-admin',
   templateUrl: './product-admin.component.html',
   styleUrls: ['./product-admin.component.scss']
 })
 export class ProductAdminComponent {
-constructor(private auth: AuthService,private productService:ProductService){}
+constructor(private auth: AuthService,private productService:ProductService,private router:Router){}
 
 products: Product[]=[];
 heretoEdit?:Product;
@@ -38,7 +39,16 @@ initNewProduct(){
 editProduct(product:Product){
   this.heretoEdit=product;
 }
-logout(){
+logout() {
   this.auth.signOut();
+
+  const navigationExtras: NavigationExtras = {
+    skipLocationChange: true,
+    replaceUrl: true,
+  };
+
+  this.router.navigate([''], navigationExtras);
+
+ 
 }
 }

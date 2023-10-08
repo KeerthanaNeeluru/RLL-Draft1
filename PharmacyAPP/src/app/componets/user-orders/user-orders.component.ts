@@ -50,6 +50,10 @@ ngOnInit() {
  console.log(this.total)
 }
 
+getTotal(){
+  this.total=this.cartComp.getTotalCost();
+}
+
 
 getAllOrders(): void {
   this.http.get("https://localhost:7148/api/Orders/GetOrders")
@@ -103,20 +107,18 @@ save(){
     this.updateRecord();
   }
 }
-setDelete(data:any){
+setDelete(data: any) {
   console.log(data);
-  
-  this.http.delete("https://localhost:7148/api/Orders/DeleteOrder/"+data.id).subscribe((result:any)=>
-  {
-    
-    alert("order cancelled");
-    this.getAllOrders();
-    
-  },(error:any)=>{
-    console.error("Error",error);
-  })
+  this.http.delete(`https://localhost:7148/api/Orders/DeleteOrder/${data.orderId}`).subscribe(
+    (result: any) => {
+      alert("Order cancelled");
+      this.getAllOrders();
+    },
+    (error: any) => {
+      console.error("Error", error);
+    }
+  );
 }
-
 
 
 }

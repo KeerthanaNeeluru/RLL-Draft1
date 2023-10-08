@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { UserDetailsService } from 'src/app/services/user-details.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { NavigationExtras, Router } from '@angular/router';
 @Component({
   selector: 'app-user-details',
   templateUrl: './user-details.component.html',
@@ -11,7 +12,7 @@ export class UserDetailsComponent {
   users:User[]=[];
   heretoEdit?:User;
   searchText:any;
-  constructor(private userService:UserDetailsService,private auth:AuthService){}
+  constructor(private userService:UserDetailsService,private auth:AuthService,private router:Router){}
   ngOnInit():void{
     console.log("Inside UserDisplayComponent initialization");
     
@@ -37,7 +38,16 @@ export class UserDetailsComponent {
       this.heretoEdit=user;
     }
   
-  logout(){
-    this.auth.signOut();
-  }
+    logout() {
+      this.auth.signOut();
+  
+      const navigationExtras: NavigationExtras = {
+        skipLocationChange: true,
+        replaceUrl: true,
+      };
+  
+      this.router.navigate([''], navigationExtras);
+  
+     
+    }
 }

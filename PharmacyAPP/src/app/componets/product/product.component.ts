@@ -4,6 +4,7 @@ import { CartService } from '../../services/cart.service';
 
 import { ProductService } from '../../services/product.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { NavigationExtras, Router } from '@angular/router';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -14,7 +15,11 @@ export class ProductComponent implements OnInit {
   public cartItems: any[] = [];
 searchText:any;
 
-  constructor(private product: ProductService,private auth:AuthService, private cartService: CartService,private toast:NgToastService) {
+  constructor(private product: ProductService
+    ,private auth:AuthService,
+     private cartService: CartService,
+     private toast:NgToastService,
+     private router:Router) {
     this.products = this.product.getProducts();
   }
 
@@ -42,6 +47,15 @@ searchText:any;
   }
   logout() {
     this.auth.signOut();
+
+    const navigationExtras: NavigationExtras = {
+      skipLocationChange: true,
+      replaceUrl: true,
+    };
+
+    this.router.navigate([''], navigationExtras);
+
+   
   }
 }
 

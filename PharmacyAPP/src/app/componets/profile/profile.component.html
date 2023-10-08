@@ -8,46 +8,40 @@
         <nav>
           <ul>
             <li><a routerLink="/dashboard">Home</a></li>
-            <li><a routerLink="/product-admin">Medicines</a></li>
-            <li><a routerLink="/user-details">Users</a></li>
-            <li><a routerLink="/orders">Orders</a></li>
-          
+            <li><a routerLink="/product">Medicines</a></li>
+            <li><a routerLink="/cart">Cart</a></li>
+            
+            <li><a routerLink="/about">About Us</a></li>
             <li><a  (click)="logout()">SignOut</a></li>
           </ul>
         </nav>
     </header>
   </div>
 
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon1" >Search </span>
+
+  <div class="card mb-3" style="width: 100%;">
+    <div class="row no-gutters" *ngFor="let u of users ">
+        <div *ngIf="u.userName==fullName">
+      <div class="col-md-4" style="float: right; height: 200px; width: 150px;"  >
+        <img src="https://tse1.mm.bing.net/th?id=OIP.4nSiPjYiNOlvj6KJiw2UTAAAAA&pid=Api&P=0&h=180"  alt="Product Image" class="card-img-top" />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title ">UserName : {{ u.userName }}</h5>
+            <p class="card-text ">FirstName : {{ u.firstName }}</p>
+            <p class="card-text ">LastName : {{ u.lastName }}</p>
+            
+            <div class="card-text ">
+              Email Id : {{ u.email  }}
+            </div>
+
+        </div>
     </div>
-    <input type="text" class="form-control" width="50%"  placeholder="Search"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+      </div>
+    </div>
   </div>
-  <div class="content">
-   
-  <div  class="container" >
-   
-</div>
-  <table class="table table-hover">
+
   
-    <tbody>
-      <tr *ngFor="let o of Orderarray ">
-    
-     <td class="text-center">{{o.userName}}</td>
-     <td>{{o.address}}</td>
-     <td><b>Rs.{{o.total}}/-</b></td>
-     <td>{{o.status}}</td>
-     
-      </tr>
-    
-    </tbody>
-  </table>
-
-</div>
-
-
   
   <footer class="footer">
     <div class="about">
@@ -92,4 +86,3 @@
       <p> &copy; 2023 MediPharm. All Rights Reserved.</p>
      
     </footer>
-  

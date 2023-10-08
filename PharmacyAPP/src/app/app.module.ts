@@ -25,6 +25,7 @@ import { UserEditComponent } from './componets/user-edit/user-edit.component';
 import { UserOrdersComponent } from './componets/user-orders/user-orders.component';
 import { OrdersComponent } from './componets/orders/orders.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { ProfileComponent } from './componets/profile/profile.component';
 
 
 
@@ -50,7 +51,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     UserEditComponent,
     UserOrdersComponent,
     OrdersComponent,
-    FilterPipe
+    FilterPipe,
+    ProfileComponent
   
 
 

@@ -12,10 +12,11 @@
 
         <div class="form-group">
             <label>Total</label>
-            <input type="text" [(ngModel)]="total" [ngModelOptions]="{standalone: true}" class="form-control" id="total" placeholder="Enter Cost">
+            <input type="text" [(ngModel)]="total" [ngModelOptions]="{standalone: true}" class="form-control" id="total" (dblclick)="getTotal()" placeholder="Enter Cost">
+            <small>double click in input box to get the cost updated</small>
           </div>
     
-        <button type="submit" class="btn btn-primary mt-4" (click)="save()" >Submit</button>
+        <button type="submit" class="btn btn-primary mt-4" (click)="save()"  >Submit</button>
        
       </form>
     </div>
